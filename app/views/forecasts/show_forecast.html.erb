@@ -1,0 +1,13 @@
+<h1>Forecast for <%= @address %></h1>
+
+<p>Current Temperature: <%= @forecast["current_temp"] %> °C</p>
+
+<% if @forecast["high"] && @forecast["low"] %>
+  <p>High: <%= @forecast["high"] %> °C | Low: <%= @forecast["low"] %> °C</p>
+<% end %>
+
+<p>
+  <%= @forecast["from_cache"] ? "Data retrieved from cache." : "Data retrieved from live API." %>
+</p>
+
+<%= link_to "Search Again", root_path %>

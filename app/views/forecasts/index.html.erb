@@ -1,0 +1,5 @@
+<%= form_with url: fetch_forecast_path, method: :post do %>
+  <%= label_tag :address, "Enter ZIP or Address" %>
+  <%= text_field_tag :address %>
+  <%= submit_tag "Get Forecast" %>
+<% end %>
